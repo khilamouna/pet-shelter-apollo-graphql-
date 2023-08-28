@@ -3,7 +3,7 @@ import { startStandaloneServer } from "@apollo/server/standalone";
 import { typeDefs, resolvers } from "./pets/index.js";
 
 //ApolloServer: require 2 params: schema defenition and resolvers
-const server = new ApolloSever({
+const server = new ApolloServer({
   typeDefs,
   resolvers,
 });
