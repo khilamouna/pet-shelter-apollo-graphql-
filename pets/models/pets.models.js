@@ -30,3 +30,26 @@ export const editItem = (id, data) => {
     return error;
   }
 };
+export const addItem = (data) => {
+  try {
+    const newPet = { id: db.pets.length + 1, ...data };
+    db.pets.push(newPet);
+    return newPet;
+  } catch (error) {
+    console.log(error, "error");
+    return error;
+  }
+};
+export const deleteItem = (id) => {
+  try {
+    const index = db.pets.findIndex((pet) => pet.id === parseInt(id));
+    if (index === -1) throw new Error("Pet not found");
+    else {
+      db.pets.splice(index, 1);
+      return db.pets;
+    }
+  } catch (error) {
+    console.log(error, "error");
+    return error;
+  }
+};
