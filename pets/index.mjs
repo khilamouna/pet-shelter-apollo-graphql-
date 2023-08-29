@@ -1,5 +1,5 @@
-import { addPet, editPet, deletePet } from "./mutations/pets.mutations";
-import { listPets, getPet } from "./queries/pets.queries";
+import { addPet, editPet, deletePet } from "./mutations/pets.mutations.mjs";
+import { listPets, getPet } from "./queries/pets.queries.mjs";
 
 export const typeDefs = ` type Pet {
     id: ID!
@@ -23,7 +23,7 @@ export const typeDefs = ` type Pet {
     age: Int!
     breed: String!
   }
-  type query {
+  type Query {
     pets:[Pet],
     pet(id: ID!): Pet
   }

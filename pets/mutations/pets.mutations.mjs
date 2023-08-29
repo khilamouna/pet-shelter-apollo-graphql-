@@ -1,4 +1,4 @@
-import { editItem, addItem, deletItem } from "../models/pets.models";
+import { editItem, addItem } from "../models/pets.models.mjs";
 export const addPet = (petToAdd) => {
   try {
     const resp = addItem(petToAdd);

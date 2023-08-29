@@ -1,4 +1,4 @@
-import db from ".././db/db.js";
+import db from "../../db/db.mjs";
 export const getItem = (id) => {
   try {
     const pet = db?.pets?.filter((pet) => pet?.id === parseInt(id))[0];
