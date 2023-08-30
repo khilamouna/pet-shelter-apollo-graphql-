@@ -162,7 +162,7 @@ describe("Add pet", () => {
       const res = JSON.parse(response.text);
 
       expect(res.data.addPet).toEqual({
-        id: "4",
+        id: "5",
         name: "Salame",
         type: "cat",
         age: 6,

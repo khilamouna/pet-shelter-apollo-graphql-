@@ -21,10 +21,11 @@ export const editItem = (id, data) => {
     const index = db.pets.findIndex((pet) => pet.id === parseInt(id));
 
     if (index === -1) throw new Error("pet not found");
-    const updatedPet = { ...db.pets[index], ...data };
-    db.pets[index] = updatedPet;
-
-    return updatedPet;
+    else {
+      data.id = parseInt(data.id);
+      db.pets[index] = data;
+      return db.pets[index];
+    }
   } catch (error) {
     console.log(error, "error");
     return error;
